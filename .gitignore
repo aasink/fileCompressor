@@ -1,3 +1,5 @@
 .vscode
 compress
-/src/main
+src/main
+.DS_Store
+data/.DS_Store
