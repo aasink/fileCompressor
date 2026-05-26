@@ -1,6 +1,6 @@
 .vscode
 compress
+test_runner
 src/main
-src/test_runner
 .DS_Store
 data/.DS_Store
