@@ -6,10 +6,7 @@ using namespace std;
 
 class App {
 public:
-    App(const string& option,
-                const string& inputFile,
-                const string& outputFile,
-                const string& algorithm);
+    App(const string& option, const string& inputFile, const string& outputFile, const string& algorithm);
 
     void run();
 

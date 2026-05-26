@@ -3,10 +3,7 @@
 #include <iostream>
 using namespace std;
 
-App::App(const string& option,
-        const string& inputFile,
-        const string& outputFile,
-        const string& algorithm)
+App::App(const string& option, const string& inputFile, const string& outputFile, const string& algorithm)
     : option(option), inputFile(inputFile), outputFile(outputFile), algorithm(algorithm) {}
 
 void App::run() {
