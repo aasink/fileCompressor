@@ -29,19 +29,21 @@ project/
 │   ├── LZWcompressor.h       # Lempel–Ziv–Welch implementation
 │   └── filehandler.h         # File read/write utilities
 ├── src/                      # Source files
-│   ├── main.cpp              # Entry point
+│   ├── algorithms/
+│   │   ├── RLEcompressor.cpp
+│   │   ├── Huffmancompressor.cpp 
+│   │   └── LZWcompressor.cpp
 │   ├── app.cpp
-│   ├── RLEcompressor.cpp
-│   ├── Huffmancompressor.cpp
-│   ├── LZWcompressor.cpp
-│   └── filehandler.cpp
+│   ├── filehandler.cpp
+│   └── main.cpp              # Entry point
 ├── tests/                    # Unit tests per algorithm
 │   ├── test_rle.cpp
 │   ├── test_huffman.cpp
 │   └── test_lzw.cpp
-├── data/                     # Sample input and expected output
+├── data/                     # Sample input and output
 │   ├── sample.txt
-│   └── expected_output.txt
+│   ├── sample.rle
+│   └── output.txt
 ├── Makefile
 └── README.md
 ```
@@ -82,7 +84,7 @@ make clean
 ## Usage
 
 ```
-./compressor <command> <input_file> --output <output_file> --algo <algorithm>
+./compressor <command> <input_file> --output <output_file> --algorithm <algorithm>
 ```
 
 ### Commands
@@ -104,22 +106,22 @@ make clean
 
 **Compress a file using Huffman coding:**
 ```bash
-./compressor compress data/sample.txt --output data/sample.huff --algo huffman
+./compressor compress data/sample.txt --output data/sample.huff --algorithm huffman
 ```
 
 **Decompress it back:**
 ```bash
-./compressor decompress data/sample.huff --output data/output.txt --algo huffman
+./compressor decompress data/sample.huff --output data/output.txt --algorithm huffman
 ```
 
 **Compress using RLE:**
 ```bash
-./compressor compress data/sample.txt --output data/sample.rle --algo rle 
+./compressor compress data/sample.txt --output data/sample.rle --algorithm rle 
 ```
 
 **Compress using LZW:**
 ```bash
-./compressor compress data/sample.txt --output data/sample.lzw --algo lzw 
+./compressor compress data/sample.txt --output data/sample.lzw --algorithm lzw 
 ```
 
 ---
