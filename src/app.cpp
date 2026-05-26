@@ -33,8 +33,8 @@ void App::run() {
         } else {
             cerr << "Unknown option: " << option << endl;
         }
-    } catch (const std::runtime_error& e) {
-        std::cerr << "File error: " << e.what() << std::endl;
-        std::exit(EXIT_FAILURE);
+    } catch (const runtime_error& e) {
+        cerr << "File error: " << e.what() << endl;
+        exit(EXIT_FAILURE);
     }
 }

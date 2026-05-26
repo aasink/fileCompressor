@@ -34,12 +34,12 @@ int main(int argc, char* argv[]) {
             else if (o_arg == "--algorithm" && i + 1 < argc) {      // get specified algorithm
                 algorithm = argv[++i];
                 if (!App::supportedAlgorithms().count(algorithm)) {     // ensure valid algorithm
-                    std::cerr << "[ERROR]: Unsupported algorithm '" << algorithm << "'.\n" << std::endl;
+                    cerr << "[ERROR]: Unsupported algorithm '" << algorithm << "'.\n" << endl;
                     return 1;
                 }
             } 
             else {
-                std::cerr << "[ERROR]: Unknown or incomplete argument: " << o_arg << "\n" << std::endl;
+                cerr << "[ERROR]: Unknown or incomplete argument: " << o_arg << "\n" << endl;
                 return 1;
             }
         }
