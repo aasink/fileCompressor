@@ -5,7 +5,7 @@ using namespace std;
 
 #pragma pack(push, 1)
 struct FileHeader {
-    char extension[8];           // file extension of input file 
+    char extension[16];           // file extension of input file 
     uint8_t algorithm;          // 1=RLE, 2=Huffman, 3=LZW
 };
 #pragma pack(pop)

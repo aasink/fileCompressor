@@ -1,13 +1,13 @@
 CXX = clang++
 CXXFLAGS = -std=c++20 -Wall -Iinclude
-SRC = src/main.cpp src/app.cpp src/filehandler.cpp src/algorithms/RLEcompressor.cpp
+SRC = src/main.cpp src/app.cpp src/filehandler.cpp src/algorithms/RLEcompressor.cpp src/algorithms/HUFFMANcompressor.cpp
 TARGET = compress
 
 $(TARGET): $(SRC)
 	$(CXX) $(CXXFLAGS) -o $@ $(SRC)
 
-TESTSRC = tests/test_main.cpp tests/test_rle.cpp \
-			src/app.cpp src/filehandler.cpp src/algorithms/RLEcompressor.cpp
+TESTSRC = tests/test_main.cpp tests/test_rle.cpp tests/test_huffman.cpp \
+			src/app.cpp src/filehandler.cpp src/algorithms/RLEcompressor.cpp src/algorithms/HUFFMANcompressor.cpp
 
 TESTTARGET = test_runner
 

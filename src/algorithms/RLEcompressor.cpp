@@ -13,7 +13,7 @@ void RLECompressor::compress(const string& inputFile, const string& outPath) {
 
     FileHandler::writeFile(outPath, compressed, header);
 
-    cout << "Compressed to: " << outPath << "\n" << endl;
+    cout << "Compressed to: " << outPath << endl;
 }
 
 void RLECompressor::decompress(const string& inputFile, const string& outPath) {
@@ -26,7 +26,7 @@ void RLECompressor::decompress(const string& inputFile, const string& outPath) {
 
     FileHandler::writeFile(newOutPath, decompressed);
 
-    cout << "Decompressed to: " << outPath << "\n" << endl;
+    cout << "Decompressed to: " << newOutPath << endl;
 }
 
 vector<unsigned char> RLECompressor::runLengthEncode(const vector<unsigned char>& data) {

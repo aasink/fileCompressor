@@ -12,7 +12,7 @@ public:
 
     // supported algorithms
     static const unordered_set<string>& supportedAlgorithms() {
-        static const unordered_set<string> algos = {"rle"};
+        static const unordered_set<string> algos = {"rle", "huffman", "lzw"};
         return algos;
     }
 

@@ -1,6 +1,7 @@
 #include "app.h"
 #include "filehandler.h"
 #include "RLEcompressor.h"
+#include "HUFFMANcompressor.h"
 #include <iostream>
 #include <memory>
 using namespace std;
@@ -18,6 +19,7 @@ void App::run() {
     unique_ptr<Compressor> compressor;   
 
     if (algorithm == "rle") compressor = make_unique<RLECompressor>();
+    if (algorithm == "huffman") compressor = make_unique<HuffmanCompressor>();
     else {
         cerr << "[ERROR]: Unsupported algorithm '" << algorithm << "'.\n" << endl;
         return;

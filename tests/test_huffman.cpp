@@ -1,29 +1,29 @@
-#include "RLEcompressor.h"
+#include "HUFFMANcompressor.h"
 #include "filehandler.h"
 #include <cassert>
 #include <iostream>
 #include <filesystem>
 
-int test_rle() {
-    string inputFile  = "data/test/rle_sample.txt";
-    string compressed = "data/test/rle_sample.rle";
-    string outputFile = "data/test/rle_output.txt";
+int test_huffman() {
+    string inputFile  = "data/test/huffman_sample.txt";
+    string compressed = "data/test/huffman_sample.huf";
+    string outputFile = "data/test/huffman_output.txt";
 
-    // string inputFile  = "data/test/rle_snail.bmp";
-    // string compressed = "data/test/rle_snail.rle";
-    // string outputFile = "data/test/rle_snail_output.bmp";
+    // string inputFile  = "data/test/huffman_snail.bmp";
+    // string compressed = "data/test/huffman_snail.huf";
+    // string outputFile = "data/test/huffman_snail_output.bmp";
 
-    RLECompressor rle;
+    HuffmanCompressor huffman;
 
-    rle.compress(inputFile, compressed);
-    rle.decompress(compressed, outputFile);
+    huffman.compress(inputFile, compressed);
+    huffman.decompress(compressed, outputFile);
 
     auto original = FileHandler::readFile(inputFile);
     auto decompressed = FileHandler::readFile(outputFile);
 
     assert(original == decompressed);
 
-    cout << "RLE test passed: decompressed file matches original." << endl;
+    cout << "Huffman test passed: decompressed file matches original." << endl;
 
     auto inputSize = filesystem::file_size(inputFile);
     auto compressedSize = filesystem::file_size(compressed);

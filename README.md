@@ -6,7 +6,7 @@ A fast, modular file compression and decompression tool written in **C++20**, su
 
 ## Overview
 
-Compresso provides a unified command-line interface for compressing and decompressing files using classical algorithms. It is designed with a clean, extensible architecture — adding a new compression algorithm is as simple as subclassing `Compressor` and registering it with the `Application` layer.
+Compressor provides a unified command-line interface for compressing and decompressing files using classical algorithms. It is designed with a clean, extensible architecture — adding a new compression algorithm is as simple as subclassing `Compressor` and registering it with the `Application` layer.
 
 **Key features:**
 - Three compression algorithms: RLE, Huffman, LZW
@@ -128,12 +128,10 @@ make clean
 
 ## Running Tests
 
-Each algorithm has its own test file. After building with `make test`, results are printed to stdout. To run an individual test binary directly:
+Each algorithm has its own test file. After building with `make test`, results are printed to stdout.
 
 ```bash
-./tests/test_huffman
-./tests/test_rle
-./tests/test_lzw
+./test_runner
 ```
 
 ---
