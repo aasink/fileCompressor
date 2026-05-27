@@ -6,7 +6,7 @@ using namespace std;
 
 int main(int argc, char* argv[]) {
     if (argc < 3) {                     // correct usage
-        cerr << "\n[ERROR]: Improper arguments.\n" << " Usage: " << argv[0] << " compress|decompress <input_file> [--output <output_file>] [--algorithm <algorithm>]\n" << endl;
+        cerr << "\n[ERROR]: Improper arguments.\n" << " Usage: " << argv[0] << " compress|decompress <input_file> --output <output_file> --algorithm <algorithm>\n" << endl;
         return 1;
     }
 

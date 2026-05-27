@@ -2,13 +2,14 @@
 #include "compressor.h"
 #include <string>
 #include <vector>
+using namespace std;
 
 class RLECompressor : public Compressor {
 public:
-    void compress(const std::string& inputFile, const std::string& outputFile) override;
-    void decompress(const std::string& inputFile, const std::string& outputFile) override;
+    void compress(const string& inputFile, const string& outputFile) override;
+    void decompress(const string& inputFile, const string& outputFile) override;
 
 private:
-    std::vector<char> runLengthEncode(const std::vector<char>& data);
-    std::vector<char> runLengthDecode(const std::vector<char>& data);
+    vector<unsigned char> runLengthEncode(const vector<unsigned char>& data);
+    vector<unsigned char> runLengthDecode(const vector<unsigned char>& data);
 };

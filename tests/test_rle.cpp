@@ -5,9 +5,13 @@
 #include <filesystem>
 
 int test_rle() {
-    string inputFile  = "data/test/sample.txt";
-    string compressed = "data/test/sample.rle";
-    string outputFile = "data/test/output.txt";
+    string inputFile  = "data/test/rle_sample.txt";
+    string compressed = "data/test/rle_sample.rle";
+    string outputFile = "data/test/rle_output.txt";
+
+    // string inputFile  = "data/test/rle_snail.bmp";
+    // string compressed = "data/test/rle_snail.rle";
+    // string outputFile = "data/test/rle_snail_output.bmp";
 
     RLECompressor rle;
 

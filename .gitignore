@@ -4,3 +4,6 @@ test_runner
 src/main
 .DS_Store
 data/.DS_Store
+data/*
+!data/test/
+!data/test/**
